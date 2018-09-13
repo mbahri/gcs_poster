@@ -1,0 +1,252 @@
+% Here, you can define your own macros. Some examples are given below.
+
+% \newcommand{\R}[0]{\mathds{R}} % real numbers
+% \newcommand{\Z}[0]{\mathds{Z}} % integers
+% \newcommand{\N}[0]{\mathds{N}} % natural numbers
+% \newcommand{\C}[0]{\mathds{C}} % complex numbers
+% \renewcommand{\vec}[1]{{\boldsymbol{{#1}}}} % vector
+% \newcommand{\mat}[1]{{\boldsymbol{{#1}}}} % matrix
+
+% % -------- THEOREM ENVIRONMENTS --------
+
+% \newtheoremstyle{break}
+%   {\topsep}{\topsep}%
+%   {\itshape}{}%
+%   {\bfseries}{}%
+%   {\newline}{}%
+% % \theoremstyle{break}
+
+% \theoremstyle{plain}
+% \newtheorem{thm}{Theorem}[section] % reset theorem numbering for each chapter
+% \newtheorem{prop}{Property}[section]
+% \newtheorem{pstion}{Proposition}[section]
+% \newtheorem{lemma}{Lemma}[section]
+
+% \theoremstyle{definition}
+% \newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+% \newtheorem{exmp}[thm]{Example} % same for example numbers
+
+% \theoremstyle{break}
+% \newtheorem{lbdefn}[thm]{Definition} % Definition with line break after header
+
+% ---------------------------------------
+
+% Custom citation
+
+\newcommand*\mycite[1]{\citet{#1} (\citeyear{#1})}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typography for vectors, matrices and tensors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*\mat[1]{\mathbf{#1}}
+\newcommand*\vv[1]{\mathbf{#1}}
+\newcommand*\ten[1]{\bm{\mathcal{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for operators
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\grad}{\nabla}
+\newcommand{\shrink}{\mathcal{S}}
+\newcommand{\vvec}{\mathrm{vec}}
+% \newcommand{\dim}{\mathrm{vec}}
+
+\newcommand*\fold[1]{\mathrm{fold}(#1)}
+\newcommand*\tr[1]{\mathrm{tr} \left[ #1 \right]}
+\newcommand*\trr{\mathrm{tr}}
+
+\newcommand*\mean[1]{\langle #1 \rangle}
+\newcommand*\inner[2]{\langle #1, \, #2 \rangle}
+
+\newcommand*\trp[1]{ #1^{\mathsf{T}} }
+
+\newcommand*\inv[1]{ #1^{-1} }
+\newcommand*\pinv[1]{ #1^{\dagger} }
+
+\newcommand*\sprox[3]{\mathrm{prox}_{#1 #2}(#3)}
+\newcommand*\prox[2]{\mathrm{prox}_{#1}(#2)}
+
+\newcommand*\KL[2]{\mathrm{KL}(#1 || #2)}
+
+\newcommand{\bvec}{\mathrm{bvec}}
+\newcommand{\bvfold}{\mathrm{bvfold}}
+\newcommand{\bdiag}{\mathrm{bdiag}}
+\newcommand{\bdfold}{\mathrm{bdfold}}
+\newcommand{\bcirc}{\mathrm{bcirc}}
+
+\newcommand*\rk[1]{\mathrm{rank}(#1)}
+\newcommand*\spn[1]{\mathrm{Span}(#1)}
+
+% \newcommand*\argmin[1]{\mathrm{arg}\!\min_{#1}}
+% \newcommand*\argmax[1]{\mathrm{arg}\!\max_{#1}}
+\DeclareMathOperator*{\argmin}{argmin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notational shortcuts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\const}{\mathrm{const}}
+\newcommand{\st}{\mathrm{s.t}}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\Ga}{\mathrm{Ga}}
+\newcommand{\var}{\mathrm{var}}
+
+\newcommand{\bepsilon}{\bm{\epsilon}}
+\newcommand{\bSigma}{\bm{\Sigma}}
+\newcommand{\bLambda}{\bm{\Lambda}}
+\newcommand{\bmu}{\bm{\mu}}
+
+% \newcommand{\ie}{\textit{i.e,}~}
+% \newcommand{\eg}{\textit{e.g,}~}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Norms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*\Fro[1]{ || #1 ||_{\mathrm{F}} }
+\newcommand*\Nuc[1]{ || #1 ||_{*} }
+\newcommand*\One[1]{ || #1 ||_{1} }
+\newcommand*\Two[1]{ || #1 ||_{2} }
+\newcommand*\Twosq[1]{ || #1 ||_{2}^2 }
+\newcommand*\LTwo[1]{ || #1 ||_{\mathrm{\ltwo}} }
+\newcommand*\OneTwo[1]{ || #1 ||_{\lonetwo} }
+\newcommand*\Frosq[1]{ || #1 ||_{\mathrm{F}}^2 }
+
+\newcommand{\ltwo}{\ell_2}
+\newcommand{\lone}{\ell_1}
+\newcommand{\lzero}{\ell_0}
+\newcommand{\linf}{\ell_{\infty}}
+\newcommand{\lp}{\ell_p}
+\newcommand{\lpq}{\ell_p / \ell_q}
+\newcommand{\lonetwo}{\ell_1 / \ell_2}
+\newcommand{\loneinf}{\ell_1 / \ell_{\infty}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Matrices and elements for the Bayesian model
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\A}{\mat{A}}
+\newcommand{\At}{\trp{\A}}
+\newcommand{\B}{\mat{B}}
+\newcommand{\Bt}{\trp{\B}}
+\newcommand{\C}{\mat{C}}
+\newcommand{\D}{\mat{D}}
+\newcommand{\R}{\mat{R}}
+
+\newcommand{\X}{\mat{X}}
+\newcommand{\Y}{\mat{Y}}
+\newcommand{\Z}{\mat{Z}}
+\newcommand{\T}{\mat{T}}
+\newcommand{\E}{\mat{E}}
+\newcommand{\LL}{\mat{\Lambda}}
+\newcommand{\II}{\mat{I}}
+\newcommand{\K}{\mat{K}}
+\newcommand{\U}{\mat{U}}
+\newcommand{\V}{\mat{V}}
+\newcommand{\M}{\mat{M}}
+\newcommand{\W}{\mat{W}}
+\newcommand{\mS}{\mat{S}}
+
+
+\newcommand{\aij}{\alpha^n_{i,j}}
+\newcommand{\iaij}{\inv{{\aij}}}
+\newcommand{\enij}{e^n_{i,j}}
+\newcommand{\Ynij}{\Y^n_{i,j}}
+\newcommand{\wni}{\vv{w}_{ni}}
+
+\newcommand{\Tn}{\mat{T}_n}
+\newcommand{\Tnt}{\trp{\Tn}}
+
+\newcommand{\En}{\mat{E}_n}
+\newcommand{\Ent}{\trp{\En}}
+\newcommand{\Xn}{\mat{X}_n}
+\newcommand{\Xnt}{\trp{\Xn}}
+\newcommand{\Yn}{\mat{Y}_n}
+\newcommand{\Ynt}{\trp{\Yn}}
+\newcommand{\Wn}{\mat{W}_n}
+\newcommand{\Wnt}{\trp{\Wn}}
+\newcommand{\LLn}{\mat{\Lambda}_n}
+\newcommand{\Kn}{\mat{K}_n}
+
+\newcommand{\Ri}{\mat{R}_i}
+\newcommand{\Rit}{\trp{\Ri}}
+
+\newcommand{\Ei}{\mat{E}_i}
+\newcommand{\Eit}{\trp{\Ei}}
+\newcommand{\XXi}{\mat{X}_i}
+\newcommand{\Xit}{\trp{\XXi}}
+\newcommand{\Yi}{\mat{Y}_i}
+\newcommand{\Yit}{\trp{\Yi}}
+\newcommand{\Wi}{\mat{W}_i}
+\newcommand{\Wit}{\trp{\Wi}}
+\newcommand{\LLi}{\mat{\Lambda}_i}
+\newcommand{\Ki}{\mat{K}_i}
+
+
+
+\newcommand{\Uc}{\mat{U_c}}
+\newcommand{\Uct}{\trp{\Uc}}
+\newcommand{\Ur}{\mat{U_r}}
+\newcommand{\Urt}{\trp{\Ur}}
+
+\newcommand{\mbeta}{\mean{\beta}}
+\newcommand{\maij}{\mean{\aij}}
+\newcommand{\mgami}{\mean{\gamma_i}}
+
+\newcommand{\mEn}{\mean{\En}}
+\newcommand{\mUc}{\mean{\Uc}}
+\newcommand{\mUr}{\mean{\Ur}}
+\newcommand{\mTn}{\mean{\Tn}}
+
+\newcommand{\mEnt}{\trp{\mEn}}
+\newcommand{\mUct}{\trp{\mUc}}
+\newcommand{\mUrt}{\trp{\mUr}}
+\newcommand{\mTnt}{\trp{\mTn}}
+
+\newcommand{\smbeta}{\sqrt{\mean{\beta}}}
+
+\newcommand{\uci}{\vv{u}_{ci}}
+\newcommand{\uri}{\vv{u}_{ri}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%          TENSOR NOTATIONS           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\tX}{\ten{X}}
+\newcommand{\tS}{\ten{S}}
+\newcommand{\tE}{\ten{E}}
+\newcommand{\tL}{\ten{L}}
+\newcommand{\tT}{\ten{T}}
+\newcommand{\tG}{\ten{G}}
+\newcommand{\tW}{\ten{W}}
+\newcommand{\tO}{\ten{O}}
+\newcommand{\tY}{\ten{Y}}
+\newcommand{\tM}{\ten{M}}
+\newcommand{\tI}{\ten{I}}
+\newcommand{\tK}{\ten{K}}
+\newcommand{\tR}{\ten{R}}
+
+\newcommand*\matr[2]{\mathbf{#1}_{[#2]}}
+\newcommand*\fslice[2]{\mathbf{#1}^{(#2)}}
+\newcommand*\facmat[2]{\mathbf{#1}^{(#2)}}
+
+%%%%%%%%%%%%%%%
+
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
+
+
+% Paragraph
+\newcommand*\mypar[1]{\vspace{0.5em} \noindent \textbf{#1} \hspace{0.5em}}
+
+\makeatletter
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace}
+
+\def\eg{\emph{e.g}\onedot} \def\Eg{\emph{E.g}\onedot}
+\def\ie{\emph{i.e}\onedot} \def\Ie{\emph{I.e}\onedot}
+\def\cf{\emph{c.f}\onedot} \def\Cf{\emph{C.f}\onedot}
+\def\etc{\emph{etc}\onedot} \def\vs{\emph{vs}\onedot}
+\def\wrt{w.r.t\onedot} \def\dof{d.o.f\onedot}
+\def\etal{\emph{et al}\onedot}
+\makeatother
